@@ -95,17 +95,18 @@
 .mini-img {
     display: flex;
     border-radius: 7 px;
-    /* border: 1px solid red;  */
+    /* border: 1px solid red; */
     width: 80%;
+    gap:10px;
     margin: auto;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .mini-img-child {
-    height: 250px;
+    height: 150px;
     border-radius:10%;
-    font-size: smaller;
+    font-size: 10px;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
@@ -116,7 +117,7 @@
 }
 
 .mini-img-child>p {
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 800;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -202,7 +203,7 @@
     justify-content:  space-around; }
 .org-child img{
     border-radius: 20px;
-    width:700px;
+    width:500px;
     object-fit: cover;
 
 }
