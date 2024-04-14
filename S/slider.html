@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .slide {
+        flex: 0 0 auto;
+        width: calc(50% - 10px); /* Adjusted width for two slides with gap */
+        max-width: calc(50% - 10px); /* Adjusted width for two slides with gap */
+        overflow: hidden;
+        margin-right: 20px; /* Gap between images */
+        border-radius: 10px; /* Crop the images */
+    }
+
+    .slide:last-child {
+        margin-right: 0;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slider-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+    }
+
+    .point {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .point.active {
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide"><img src="https://shop.bewakoof.com/cdn/shop/files/12Birthday-extend_1x1-common_1.jpg?v=1712943076&width=360" alt=""></div>
+        <div class="slide"><img src="https://shop.bewakoof.com/cdn/shop/files/12Birthday-extend_1x1-common_1.jpg?v=1712943076&width=360" alt=""></div>
+        <div class="slide"><img src="https://shop.bewakoof.com/cdn/shop/files/12Birthday-extend_1x1-common_1.jpg?v=1712943076&width=360" alt=""></div>
+        <div class="slide"><img src="https://shop.bewakoof.com/cdn/shop/files/12Birthday-extend_1x1-common_1.jpg?v=1712943076&width=360" alt=""></div>
+        <!-- Add more slides as needed -->
+    </div>
+    <div class="slider-controls">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+    </div>
+</div>
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const points = document.querySelectorAll('.point');
+    let currentIndex = 0;
+    const slideWidth = slides[0].offsetWidth + 20; // Width of slide including margin
+
+    function showSlide(index) {
+        if (index < 0) {
+            index = slides.length - 2;
+        } else if (index > slides.length - 2) {
+            index = 0;
+        }
+
+        const transformValue = -index * slideWidth;
+        document.querySelector('.slider').style.transform = `translateX(${transformValue}px)`;
+
+        // Update points
+        points.forEach((point, i) => {
+            if (i === index) {
+                point.classList.add('active');
+            } else {
+                point.classList.remove('active');
+            }
+        });
+
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+</script>
+</body>
+</html>

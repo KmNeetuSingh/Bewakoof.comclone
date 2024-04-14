@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <link rel="stylesheet" href="login.css">
+
+    <title>Login</title>
+
+    <style>
+        * {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+
+}
+
+.top {
+    /* border: 1px solid grey; */
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(218, 214, 214);
+    align-items: center;
+}
+
+.top>.top-child>a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 16px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* second nav */
+
+
+.s-sec-top{
+    border-bottom: 1px solid grey;
+    height: 63px;
+    display: flex;
+    align-items: center;
+}
+
+.sec-top {
+    display: flex;
+    /* border: 1px solid blue; */
+    height: 58px;
+    width: 72%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.sec-top-child {
+    width: 14%;
+    height: 58px;
+}
+.sec-top-child>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* men women mobile cover*/
+
+.sec-top-child-a>a {
+    text-decoration: none;
+    font-family: Verdana,Tahoma, sans-serif;
+    /* border: 1px solid red; */
+    padding-left: 20px;
+    color: black;
+}
+
+
+
+.sec-top-child>img {
+    width: 100%;
+}
+
+
+
+/*  search input  */
+
+.search{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    width: 340px;
+    height: 46px;
+    margin-top: 8px;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(236, 232, 232);
+}
+
+.search>input{
+    border: none;
+    border-radius: 4px;
+    width: 240px;
+   height: 100%;
+   background-color: rgb(233, 231, 231);
+}
+.sec-top-child-icon {
+    display: flex;
+    font-size: 27px;
+    color: rgb(152, 150, 150);
+}
+
+/* login */
+
+.login{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.login>a{
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-right: 10px;
+}
+.login>.bx{
+padding: 10px;
+font-size: 22px;
+color: black;
+}
+
+
+
+/* third navbar */
+
+.third-top{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 75px;
+    align-items: center;
+    justify-content: space-around;
+    width: 94%;
+    margin: auto;
+}
+.third-top>a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family:  sans-serif;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- first navbar -->
+    <!-- <div id="loginFormContainer"></div> -->
+
+    <div class="s-sec-top">
+
+        <div class="sec-top">
+
+            <!-- logo -->
+            <div class="sec-top-child">
+                <img src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="" class="logo">
+            </div>
+
+
+            <!-- men women mobile cover -->
+            <div class="sec-top-child-a"> <a href="">MEN</a><a href="">WOMEN</a><a href="">MOBILE COVERS</a> </div>
+
+
+            <!-- search,  -->
+            <div class="sec-top-child-icon">
+                <div class="search">
+                    <i class='bx bx-search-alt-2'></i>
+                    <input type="text" placeholder="Search by product, category or collection">
+                </div>
+
+
+                <!-- login -->
+                <div class="login">
+                    <a href="">Login</a>
+                    <a href="login.html"><i class='bx bx-heart'> Wishlist </i> </a>
+                    <a href="cart.html">
+                        <i class='bx bx-shopping-bag'> Cart </i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="login-parent">
+
+        <div class="left-login-img">
+            <img src="https://customer.bewakoof.com/images/login_banner.webp" alt="" srcset="" width="100%">
+        </div>
+        <div class="rightloginform">
+            <h3>Log in / Sign up</h3>
+            <h4>Join us now to be part of Bewakoof® family!</h4>
+
+            <div class="form-inner">
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="mobile_code" class="form-control" placeholder="Phone Number" name="name">
+                    </div>
+                    <button type="submit" class="form-submit">Continue</button>
+                    <div class="parenthr">
+                    </div>
+                    <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof<span
+                            class="tradeMark">®</span>'s <a href="https://www.bewakoof.com/terms-and-conditions"
+                            target="_blank">Terms and Conditions </a>and <a
+                            href="https://www.bewakoof.com/privacy-policy-and-disclaimer" target="_blank">Privacy
+                            Policy</a>.</p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+
+    <script>
+        $("#mobile_code").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+        });
+    </script>
+    </body>
+
+</html>
